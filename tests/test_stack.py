@@ -1,6 +1,5 @@
 """Здесь надо написать тесты с использованием unittest для модуля stack."""
 def test_stack(some_stack):
-
     assert some_stack.top == None
 
 def test_stack_push(some_stack):
