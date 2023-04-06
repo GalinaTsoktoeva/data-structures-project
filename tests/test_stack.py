@@ -1,5 +1,5 @@
 """Здесь надо написать тесты с использованием unittest для модуля stack."""
-from src.stack import Stack
+
 def test_stack(some_stack):
 
     assert some_stack.top == None
