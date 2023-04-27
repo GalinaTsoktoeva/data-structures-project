@@ -19,8 +19,6 @@ class LinkedList:
             new_node.next_node = self.head
             self.head = new_node
 
-
-
     def insert_at_end(self, data: dict) -> None:
         """Принимает данные (словарь) и добавляет узел с этими данными в конец связанного списка"""
         new_node = Node(data)
@@ -46,3 +44,23 @@ class LinkedList:
 
         ll_string += ' None'
         return ll_string.strip()
+
+    def to_list(self):
+        new_list = []
+        node = self.head
+        while node:
+            new_list.append(node.data)
+            node = node.next_node
+        return new_list
+
+    def get_data_by_id(self, id):
+        node = self.head
+
+        while node:
+            try:
+                ID = node.data["id"]
+            except TypeError:
+                print("Данные не являются словарем или в словаре нет id.")
+            if ID == id:
+                return node.data
+            node = node.next_node
